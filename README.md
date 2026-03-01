@@ -77,3 +77,8 @@ NOTARIZE=1 NOTARY_PROFILE="YOUR_PROFILE" ./scripts/package_app.sh
 - Persist settings with `UserDefaults`
 - Sound + attention request when time is up
 - Quit from status bar menu
+
+## Author
+
+- **Tran Trung Truc**
+- GitHub: https://github.com/trucuit

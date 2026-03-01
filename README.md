@@ -1,56 +1,65 @@
-# status-bar-countdown
+# Status Bar Countdown
 
-Updated on 2026-03-01.
+Ứng dụng macOS hiển thị đồng hồ đếm ngược trên thanh status bar, xây dựng bằng Swift + AppKit.
 
-## Overview
+## 📋 Tính năng
 
-Simple macOS status bar countdown app built with Swift and AppKit.
+- Đồng hồ đếm ngược trên macOS status bar
+- Cài đặt thời gian tùy chỉnh
+- Thông báo khi hết giờ
+- Giao diện native macOS
+- Nhẹ, chiếm ít tài nguyên
 
-## Tech Stack
+## 🛠️ Công nghệ
 
-- Swift Package
+- **Language:** Swift
+- **Framework:** AppKit
+- **Build:** Swift Package Manager
 
-Detected source languages:
-- Swift: 3 files
-- Markdown: 2 files
-- Shell: 2 files
+## ⚙️ Cài đặt
 
-## Project Structure
+### Yêu cầu
 
-```text
-status-bar-countdown/
-- .gitignore
-- Assets/
-- dist/
-- INSTALL_CHECKLIST_MAC.md
-- Package.swift
-- README.md
-- scripts/
-- Sources/
-```
+- macOS 13.0+
+- Xcode 14+ hoặc Swift CLI
 
-## Setup and Run
+### 1. Clone & build
 
 ```bash
-cd /Users/tructt/Public/Workspace/Projects/status-bar-countdown
+git clone https://github.com/trucuit/status-bar-countdown.git
+cd status-bar-countdown
 swift build
+```
+
+### 2. Chạy ứng dụng
+
+```bash
 swift run
 ```
 
-## Repository
+### 3. Cài đặt vào hệ thống
 
-- Git branch: main
-- Working tree clean: Yes
-- Remotes:
-- github	https://github.com/trucuit/status-bar-countdown.git (fetch)
-- github	https://github.com/trucuit/status-bar-countdown.git (push)
+Xem hướng dẫn chi tiết tại [INSTALL_CHECKLIST_MAC.md](INSTALL_CHECKLIST_MAC.md).
 
-## Notes
+## 📁 Cấu trúc
 
-- This README was generated from current source structure and build metadata.
-- Update commands and architecture details if project behavior changes.
+```
+status-bar-countdown/
+├── Sources/       # Swift source code
+├── Assets/        # App icons & resources
+├── scripts/       # Build & install scripts
+├── dist/          # Distribution builds
+└── Package.swift  # SPM manifest
+```
 
-## Author
+## 🔒 Bảo mật
 
-- trung truc
-- GitHub: https://github.com/trucuit
+Ứng dụng không yêu cầu API key hay credentials. Chạy hoàn toàn local.
+
+## 📄 License
+
+All rights reserved.
+
+## 👤 Author
+
+**trung truc** — [GitHub](https://github.com/trucuit)

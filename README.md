@@ -1,84 +1,56 @@
-# StatusBarCountdown
+# status-bar-countdown
+
+Updated on 2026-03-01.
+
+## Overview
 
 Simple macOS status bar countdown app built with Swift and AppKit.
 
-## Run
+## Tech Stack
+
+- Swift Package
+
+Detected source languages:
+- Swift: 3 files
+- Markdown: 2 files
+- Shell: 2 files
+
+## Project Structure
+
+```text
+status-bar-countdown/
+- .gitignore
+- Assets/
+- dist/
+- INSTALL_CHECKLIST_MAC.md
+- Package.swift
+- README.md
+- scripts/
+- Sources/
+```
+
+## Setup and Run
 
 ```bash
-cd /Users/tructt/Public/Projects/StatusBarCountdown
+cd /Users/tructt/Public/Workspace/Projects/status-bar-countdown
+swift build
 swift run
 ```
 
-Optional: pass initial countdown minutes.
+## Repository
 
-```bash
-swift run StatusBarCountdown 15
-```
+- Git branch: main
+- Working tree clean: Yes
+- Remotes:
+- github	https://github.com/trucuit/status-bar-countdown.git (fetch)
+- github	https://github.com/trucuit/status-bar-countdown.git (push)
 
-Default countdown is 25 minutes.
+## Notes
 
-## Build .app (with icon)
-
-Generate icon assets:
-
-```bash
-cd /Users/tructt/Public/Projects/StatusBarCountdown
-swift scripts/generate_app_icon.swift Assets/AppIcon.iconset
-iconutil -c icns Assets/AppIcon.iconset -o Assets/AppIcon.icns
-```
-
-Package local app bundle:
-
-```bash
-cd /Users/tructt/Public/Projects/StatusBarCountdown
-# Default is Apple Silicon optimized build (arm64)
-./scripts/package_app.sh
-open /Users/tructt/Public/Projects/StatusBarCountdown/dist/StatusBarCountdown.app
-```
-
-Create release artifacts (`.zip` + `.dmg`):
-
-```bash
-cd /Users/tructt/Public/Projects/StatusBarCountdown
-# Creates:
-# - dist/StatusBarCountdown-apple-silicon.zip
-# - dist/StatusBarCountdown-apple-silicon.dmg
-./scripts/create_release_artifacts.sh
-```
-
-Optional universal build (Apple Silicon + Intel):
-
-```bash
-cd /Users/tructt/Public/Projects/StatusBarCountdown
-ARCH_MODE=universal ./scripts/create_release_artifacts.sh
-```
-
-Optional notarization flow (requires `Developer ID Application` cert and a Notary keychain profile):
-
-```bash
-cd /Users/tructt/Public/Projects/StatusBarCountdown
-NOTARIZE=1 NOTARY_PROFILE="YOUR_PROFILE" ./scripts/package_app.sh
-```
-
-## Features
-
-- Countdown shown in macOS status bar (menu bar)
-- Reset timer to initial value
-- Add custom quick time from settings
-- Simplified macOS-style settings form (clear labels + grouped sections)
-- Preset selector (`Pomodoro`, `Deep Work`, `Sprint`)
-- Inline validation + `Reset Defaults`
-- Optional `Apply and reset timer immediately` when saving
-- Settings UI to change:
-  - default countdown minutes
-  - quick add minutes
-  - play sound on finish
-  - bounce app icon on finish
-- Persist settings with `UserDefaults`
-- Sound + attention request when time is up
-- Quit from status bar menu
+- This README was generated from current source structure and build metadata.
+- Update commands and architecture details if project behavior changes.
 
 ## Author
 
-- **Tran Trung Truc**
+- trung truc
 - GitHub: https://github.com/trucuit
